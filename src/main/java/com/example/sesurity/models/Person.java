@@ -21,7 +21,7 @@ public class Person {
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")
     @Column(name="email")
-    private int email;
+    private String email;
 
     @NotEmpty(message = "LastName should not be empty")
     @Size(min = 2, max = 30, message = "LastName should be between 2 and 30 characters")
@@ -61,11 +61,11 @@ public class Person {
         this.age = age;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -93,7 +93,7 @@ public class Person {
         this.password = password;
     }
 
-    public Person(int age, int email, String lastName, String userName) {
+    public Person(int age, String email, String lastName, String userName) {
         this.age = age;
         this.email = email;
         this.lastName = lastName;
